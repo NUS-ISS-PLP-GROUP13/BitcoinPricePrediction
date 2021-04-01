@@ -9,3 +9,7 @@
 
 * Sentiment score generating based on fine-tuning BERT. (Model1a)
 * Bitcoin Price prediction according sentiment score, trends, comment counts, previous days closing price. (Model1b)
+
+**Second task: Topic Modelling**
+
+* Todo
