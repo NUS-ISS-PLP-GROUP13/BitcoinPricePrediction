@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Crypterio</title>
+	<link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../static/css/style.css">
+	<link rel="stylesheet" href="../static/css/icons.css">
+	<link rel="stylesheet" href="../static/css/ui.css">
+</head>
+<body class="crypt-dark">
+	<header>
+		<div class="container-full-width">
+			<div class="crypt-header">
+				<div class="row">
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-5">
+						<div class="row">
+							<div class="col-xs-2">
+								<div class="crypt-logo">
+									<img src="../static/images/logo.jpg" alt="">
+								</div>
+							</div>
+							<div class="col-xs-2">
+								<div class="crypt-mega-dropdown-menu">
+								  	<a href="" class="crypt-mega-dropdown-toggle">BTC/ETH <i class="pe-7s-angle-down-circle"></i></a>
+								  	<div class="crypt-mega-dropdown-menu-block">
+								  		<div class="crypt-market-status">
+											<div>
+											  <!-- Tab panes -->
+											  <div class="tab-content">
+											    <div role="tabpanel" class="tab-pane active">
+											    	<table class="table table-striped">
+													  <thead>
+													    <tr>
+													      <th scope="col">Coin</th>
+													      <th scope="col">Price</th>
+													      <th scope="col">Volume</th>
+													      <th scope="col">Change</th>
+													    </tr>
+													  </thead>
+													  <tbody>
+													    <tr>
+													      <th scope="row">BTC</th>
+													      <td class="crypt-down">0.000056</td>
+													      <td>5.3424984</td>
+													      <td class="crypt-down"><b>-5.4%</b></td>
+													    </tr>
+													  </tbody>
+													</table>
+											    </div>
+											    <div role="tabpanel" class="tab-pane">
+											    	<table class="table table-striped">
+													  <thead>
+													    <tr>
+													      <th scope="col">Coin</th>
+													      <th scope="col">Price</th>
+													      <th scope="col">Volume</th>
+													      <th scope="col">Change</th>
+													    </tr>
+													  </thead>
+													  <tbody>
+													    <tr>
+													      <th scope="row">BTC</th>
+													      <td class="crypt-down">0.000056</td>
+													      <td>5.3424984</td>
+													      <td class="crypt-down"><b>-5.4%</b></td>
+													    </tr>
+													   													  </tbody>
+													</table>
+											    </div>
+											    <div role="tabpanel" class="tab-pane">
+											    	<table class="table table-striped">
+													  <thead>
+													    <tr>
+													      <th scope="col">Coin</th>
+													      <th scope="col">Price</th>
+													      <th scope="col">Volume</th>
+													      <th scope="col">Change</th>
+													    </tr>
+													  </thead>
+													  <tbody>
+													    <tr>
+													      <th scope="row">BTC</th>
+													      <td class="crypt-down">0.000056</td>
+													      <td>5.3424984</td>
+													      <td class="crypt-down"><b>-5.4%</b></td>
+													    </tr>
+													  </tbody>
+													</table>
+											    </div>
+											  </div>
+											</div>
+										</div>
+								  	</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-8 col-lg-8 col-md-8 d-none d-md-block d-lg-block">
+						<ul class="crypt-heading-menu fright">
+							<li><a href="/exchange">Exchange</a></li>
+                            <li><a href="/show">Show</a></li>
+{#							<li><a href="trading1.html">Trading</a></li>#}
+						</ul>
+					</div>
+					<i class="menu-toggle pe-7s-menu d-xs-block d-sm-block d-md-none d-sm-none"></i>
+				</div>
+			</div>
+		</div>
+		<div class="crypt-mobile-menu">
+			<ul class="crypt-heading-menu">
+				<li class="active"><a href="">Exchange</a></li>
+
+			</ul>
+			<div class="crypt-gross-market-cap">
+				<h5>$34.795.90 <span class="crypt-up pl-2">+3.435 %</span></h5>
+				<h6>0.7925.90 BTC <span class="crypt-down pl-2">+7.435 %</span></h6>
+			</div>
+		</div>
+	</header>
+	<!-- Main Content -->
+	<div class="container-fluid">
+		<div class="row sm-gutters">
+			<div class="col-lg-6">
+				<div class="table-responsive">
+					<table class="table table-striped crypt-table-market-cap mt-4">
+					  <thead>
+					    <tr>
+					      <th scope="col">Rank</th>
+					      <th scope="col" class="text-left pl-2">Name</th>
+					      <th scope="col">Date_price</th>
+					      <th scope="col">Predict_price</th>
+					      <th scope="col">Ratio</th>
+					      <th scope="col">Activeness</th>
+					      <th scope="col">Trend</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <th>1</th>
+					      <td class="text-left pl-2 font-weight-bold"><img src="../static/images/coins/btc.png" width="20" class="pr-1 crypt-market-cap-logo" alt="coin"> <a href="index.html">Bitcoin</a></td>
+					      <td>{{ data[3] }}</td>
+					      <td>{{ data[2] }}</td>
+                            {% if data[0] == False %}
+					      <td class="crypt-down">-{{ data[1] }}</td>
+                            {% endif %}
+                            {% if data[0] == True %}
+                            <td class="crypt-up">+{{ data[1] }}</td>
+                            {% endif %}
+
+					      <td> {{ data[4] }}</td>
+					      <td> {{ data[5] }}</td>
+					    </tr>
+					  </tbody>
+					</table>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="row sm-gutters">
+					<div class="col-md-6 pr-0">
+						<div class="crypt-fulldiv-linechart mt-4">
+							<h4 class="coinname crypt-yellow"><i class="cf cf-btc-alt"></i> Bitcoin</h4>
+							<div
+				      			class ="crypt-individual-marketcap"
+				      			data-charts ="[65,59,81,81,56,55,40,80,90]" 
+				      			data-bg = "fdddb7"
+				      			data-border = "f8a036">
+					      		<canvas></canvas>
+					      	</div>
+					      	<div class="coin-meta-data text-center">
+                                {% if data[0] == False %}
+					      		<h5 class="crypt-down">-{{ data[1] }} <img src="../static/images/download-arrow.svg" width="15" class="crypt-market-cap-logo" alt="coin"></h5>
+					      		{% endif %}
+                                {% if data[0] == True %}
+                                <h5 class="crypt-green">+{{ data[1] }} <img src="../static/images/up-arrow.svg" width="15" class="crypt-market-cap-logo" alt="coin"></h5>
+                                {% endif %}
+                                <h3>{{ data[2] }}</h3>
+					      		<h6>PREDICT PRICE</h6>
+					      	</div>
+						</div>
+					</div>
+					<div class="col-md-12 pl-2 ml-1">
+						<div id="carousel-pager" class="carousel vert slide crypt-currency-slider mt-3" data-ride="carousel" data-interval="3000"> 
+        
+
+					      
+					      <!-- Controls --> 
+					      
+					      <a class="left carousel-control" href="#carousel-pager" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="right carousel-control" href="#carousel-pager" role="button" data-slide="next"> <span class="chevron-circle-down" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	
+	
+	<footer>
+		
+	</footer>
+	<script src="../static/js/jquery.js"></script>
+	<script src="../static/js/Chart.min.js"></script>
+	<script src="../static/js/chart.js"></script>
+
+	<script src="../static/amc/core.js"></script>
+	<script src="../static/amc/charts.js"></script>
+	<script src="../static/amc/dark.js"></script>
+	<script src="../static/amc/animated.js"></script>
+	<script src="../static/js/jquery.js"></script>
+	<script src="../static/js/popper.min.js"></script>
+	<script src="../static/bootstrap/js/bootstrap.bundle.js"></script>
+	<script src="../static/bootstrap/js/bootstrap.js"></script>
+	<script src="../static/js/main.js"></script>
+	<script src="../static/js/amc.js"></script>
+</body>
+</html>
