@@ -43,9 +43,9 @@ optimizer = AdamW(model.parameters(),
 
 from transformers import BertTokenizer
 
-# output_file = "D:\workspace\python\Bit_coin\Controller\Model1\.model_bert_ft_bitcoin.pth"
+output_file = "D:\workspace\python\Bit_coin\Controller\Model1\.model_bert_ft_bitcoin.pth"
 
-checkpoint = torch.load("D:\workspace\python\Bit_coin_v1.1\Controller\Model1\.model_bert_ft_bitcoin.pth", map_location='cpu')
+checkpoint = torch.load(output_file, map_location='cpu')
 model.load_state_dict(checkpoint['model_state_dict'])
 optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
 

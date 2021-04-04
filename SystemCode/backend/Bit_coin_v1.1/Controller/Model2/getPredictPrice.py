@@ -33,4 +33,4 @@ def getPridictPrice(date_input, score, number):
     flag, ratio = get_radio(res_new, close_price)
     return res_new, close_price, flag, ratio, number, trend
 
-# getPridictPrice('2020-09-09', -0.8115406632423401, 101)
+# getPridictPrice('2021-01-31', -0.8115407132602238, 143)

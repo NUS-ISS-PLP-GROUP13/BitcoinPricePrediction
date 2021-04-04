@@ -21,86 +21,36 @@
 								</div>
 							</div>
 							<div class="col-xs-2">
-								<div class="crypt-mega-dropdown-menu">
-								  	<a href="" class="crypt-mega-dropdown-toggle">BTC/ETH <i class="pe-7s-angle-down-circle"></i></a>
-								  	<div class="crypt-mega-dropdown-menu-block">
-								  		<div class="crypt-market-status">
-											<div>
-											  <!-- Tab panes -->
-											  <div class="tab-content">
-											    <div role="tabpanel" class="tab-pane active">
-											    	<table class="table table-striped">
-													  <thead>
-													    <tr>
-													      <th scope="col">Coin</th>
-													      <th scope="col">Price</th>
-													      <th scope="col">Volume</th>
-													      <th scope="col">Change</th>
-													    </tr>
-													  </thead>
-													  <tbody>
-													    <tr>
-													      <th scope="row">BTC</th>
-													      <td class="crypt-down">0.000056</td>
-													      <td>5.3424984</td>
-													      <td class="crypt-down"><b>-5.4%</b></td>
-													    </tr>
-													  </tbody>
-													</table>
-											    </div>
-											    <div role="tabpanel" class="tab-pane">
-											    	<table class="table table-striped">
-													  <thead>
-													    <tr>
-													      <th scope="col">Coin</th>
-													      <th scope="col">Price</th>
-													      <th scope="col">Volume</th>
-													      <th scope="col">Change</th>
-													    </tr>
-													  </thead>
-													  <tbody>
-													    <tr>
-													      <th scope="row">BTC</th>
-													      <td class="crypt-down">0.000056</td>
-													      <td>5.3424984</td>
-													      <td class="crypt-down"><b>-5.4%</b></td>
-													    </tr>
-													   													  </tbody>
-													</table>
-											    </div>
-											    <div role="tabpanel" class="tab-pane">
-											    	<table class="table table-striped">
-													  <thead>
-													    <tr>
-													      <th scope="col">Coin</th>
-													      <th scope="col">Price</th>
-													      <th scope="col">Volume</th>
-													      <th scope="col">Change</th>
-													    </tr>
-													  </thead>
-													  <tbody>
-													    <tr>
-													      <th scope="row">BTC</th>
-													      <td class="crypt-down">0.000056</td>
-													      <td>5.3424984</td>
-													      <td class="crypt-down"><b>-5.4%</b></td>
-													    </tr>
-													  </tbody>
-													</table>
-											    </div>
-											  </div>
-											</div>
-										</div>
-								  	</div>
-								</div>
-							</div>
+                                <div class="crypt-mega-dropdown-menu"> <a href="" class="crypt-mega-dropdown-toggle">Please select a year <i class="pe-7s-angle-down-circle"></i></a>
+                                    <div class="crypt-mega-dropdown-menu-block">
+                                        <div class="crypt-market-status">
+                                            <div>
+                                                <div class="tab-content">
+                                                    <div role="tabpanel" class="tab-pane active">
+                                                        <SELECT name="select" onchange="window.open(this.options[this.selectedIndex].value,target='_self')">
+                                                               <OPTION>Please select a year</OPTION>
+                                                            <OPTION value='all'>Topic(all)</OPTION>
+                                                                  <OPTION value='2017'>Topic(2017)</OPTION>
+                                                                    <OPTION value='2018'>Topic(2018)</OPTION>
+                                                                      <OPTION value='2019'>Topic(2019)</OPTION>
+                                                                        <OPTION value='2020'>Topic(2020)</OPTION>
+                                                          </SELECT>
+
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 						</div>
 					</div>
 					<div class="col-xl-8 col-lg-8 col-md-8 d-none d-md-block d-lg-block">
 						<ul class="crypt-heading-menu fright">
 							<li><a href="/exchange">Exchange</a></li>
                             <li><a href="/show">Show</a></li>
-{#							<li><a href="trading1.html">Trading</a></li>#}
 						</ul>
 					</div>
 					<i class="menu-toggle pe-7s-menu d-xs-block d-sm-block d-md-none d-sm-none"></i>
@@ -138,7 +88,7 @@
 					  <tbody>
 					    <tr>
 					      <th>1</th>
-					      <td class="text-left pl-2 font-weight-bold"><img src="../static/images/coins/btc.png" width="20" class="pr-1 crypt-market-cap-logo" alt="coin"> <a href="index.html">Bitcoin</a></td>
+					      <td >{{ data[6] }}</td>
 					      <td>{{ data[3] }}</td>
 					      <td>{{ data[2] }}</td>
                             {% if data[0] == False %}

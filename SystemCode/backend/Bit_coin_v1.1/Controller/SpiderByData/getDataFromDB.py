@@ -1,9 +1,11 @@
 from datetime import datetime
 import pandas as pd
 import pymysql
+import Controller.DB.DB_basic as db_basic
 
 # 打开数据库连接
-db = pymysql.connect(host="localhost", user="root", password="", database="bitcoin")
+db = pymysql.connect(host=db_basic.db['host'], user=db_basic.db['user'], password=db_basic.db['pwd'],
+                     database=db_basic.db['db_name'])
 
 
 def dataFormat(data):

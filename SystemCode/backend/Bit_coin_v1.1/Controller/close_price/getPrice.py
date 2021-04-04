@@ -1,12 +1,15 @@
 from datetime import datetime
 import pymysql
+import Controller.DB.DB_basic as db_basic
+
+print(db_basic.db)
 
 def dateFormat(date):
     res = datetime.strptime(date, "%Y-%m-%d").strftime('%Y/%#m/%#d')
     return res
 
 def getPrice(date):
-    db = pymysql.connect(host="localhost", user="root", password="", database="bitcoin")
+    db = pymysql.connect(host=db_basic.db['host'], user=db_basic.db['user'], password=db_basic.db['pwd'], database=db_basic.db['db_name'])
     dataInput = dateFormat(date)
 
     # 使用 cursor() 方法创建一个游标对象 cursor
