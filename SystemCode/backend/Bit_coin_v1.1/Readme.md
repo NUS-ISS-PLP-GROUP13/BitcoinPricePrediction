@@ -1,6 +1,8 @@
 ### This is the running code of Bitcoin price prediction and related topic modelling system 
 
 * **Required packages for SYSTEM:**
+  * python version>=3 
+  * pymysql  mysql
   * pytorch
   * transformer
 
